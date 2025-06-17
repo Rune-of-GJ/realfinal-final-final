@@ -81,8 +81,10 @@ function App () {
       return
     }
     const localData = JSON.parse(rawData)
-  },[] )
-
+    if (localData.length === 0) {
+      setIsDataLoaded(true)
+      return
+    }
     localData.sort((a, b) => Number(b.id) - Number(a.id))
     idRef.current = localData[0].id
 
