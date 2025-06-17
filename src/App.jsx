@@ -76,12 +76,12 @@ function App () {
     // setIsDataLoaded(true)
 
     const rawData = localStorage.getItem("diary")
-    const localData = JSON.parse(rawData)
-    
-    if(localData.length === 0) {
+    if (!rawData){
       setIsDataLoaded(true)
-      return 
+      return
     }
+    const localData = JSON.parse(rawData)
+  },[] )
 
     localData.sort((a, b) => Number(b.id) - Number(a.id))
     idRef.current = localData[0].id
