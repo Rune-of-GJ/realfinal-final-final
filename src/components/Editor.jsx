@@ -2,8 +2,8 @@ import './Editor.css'
 import { useState, useEffect, useCallback } from 'react'
 import { getFormattedDate, emotionList } from '../utils'
 import { useNavigate } from 'react-router-dom'
-import Button from './button'
-import EmotionItem from './emotionItem'
+import Button from './Button'
+import EmotionItem from './EmotionItem'
 
 const Editor = ({ initData, onSubmit }) => {
 const navigate = useNavigate()
