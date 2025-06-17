@@ -86,10 +86,9 @@ function App () {
       return
     }
     localData.sort((a, b) => Number(b.id) - Number(a.id))
-    idRef.current = localData[0].id
-
-      dispatch({type: "INIT", data: localData})
-      setIsDataLoaded(true)
+    idRef.current = localData[0].id + 1
+    dispatch({type: "INIT", data: localData})
+    setIsDataLoaded(true)
   }, [])
 
   const onCreate = (date, content, emotionId) => {
